@@ -133,7 +133,7 @@ def enterFloor(request):
                 elevator.status = Status.DOWN
             else:
                 elevator.status = Status.UP
-            msg += fr"Door closed!!\n Going {elevator.status} \n"
+            msg += f"Door closed!!  Going {elevator.status}  "
             elevator.save()
 
             # UPDATING THE REQUESTS TABLE
@@ -141,7 +141,7 @@ def enterFloor(request):
             req = Request(**obj)
             req.save()
 
-            msg += fr"Reached floor number {floor}.\n Door opened!\n"
+            msg += f"Reached floor number {floor}.  Door opened! "
             elevator.cur_floor = floor
             elevator.status = Status.OPEN
             elevator.save()
