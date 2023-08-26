@@ -106,7 +106,7 @@ def callElevator(request):
             obj = {'dest_floor': floor, 'assigned_elevator_id': assigned_elevator.elevator_id, 'is_pending': "No"}
             req = Request(**obj)
             req.save()
-            
+
             # UPDATED THE CUURENT FLOOR
             assigned_elevator.cur_floor = floor
             assigned_elevator.status = Status.OPEN
@@ -136,6 +136,7 @@ def enterFloor(request):
             msg += fr"Door closed!!\n Going {elevator.status} \n"
             elevator.save()
 
+            # UPDATING THE REQUESTS TABLE
             obj = {'dest_floor': floor, 'assigned_elevator_id': elevator.elevator_id, 'is_pending': "No"}
             req = Request(**obj)
             req.save()
