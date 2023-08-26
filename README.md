@@ -1,7 +1,12 @@
 # elevator-system
 
-This is an djangoREST based application which handles single button based elevator system.
+This is an djangoREST based application with postgreSQL database which handles single button based elevator system.
 This is a backend project where we can trigger the different APIs from web browser or Postman with necessary inputs to perform corresponding actions.
+
+**Set up the project**
+1. CLone the git repository
+2. A requirements.txt file has been attached for necessary installs
+3. Change the postgreSQL database UserNAme and Password accordingly.
 
 **Models used for the project**
 We are maintaining two tables: Elevator and Request
