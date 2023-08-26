@@ -24,5 +24,6 @@ urlpatterns = [
     re_path(r'api/door/', views.door),
     re_path(r'api/fetchRequests/', views.fetchRequests),
     re_path(r'api/callElevator/', views.callElevator),
+    re_path(r'api/enterFloor/', views.enterFloor),
     
 ]

@@ -5,13 +5,6 @@ from .STATUS import Status
 
 class Elevator(models.Model):
 
-    # STATUS_CHOICES = (
-    #     Status.OPEN,
-    #     Status.DOWN,
-    #     Status.UP,
-    #     Status.STOP
-    # )
-
     elevator_id = models.AutoField(primary_key=True)
     is_available = models.CharField(max_length=122, default="Yes")
     cur_floor = models.IntegerField(default=0)
